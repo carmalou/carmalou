@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<style type = "text/css">
+			body {
+				background: url(images/type-set-resized.jpg) no-repeat center center fixed; 
+ 				-webkit-background-size: cover;
+ 				-moz-background-size: cover;
+ 				-o-background-size: cover;
+				background-size: cover;
+				width: 100%;
+			}
+			.header {
+				font-family: "Courier New", Courier, monospace;
+				text-align: center;
+				font-size: 28pt;
+				position: absolute;
+				margin: 0;
+				top: 0;
+				width: 99%
+			}
+			.left {
+				position: relative;
+				width: 15%;
+				float: left;
+  				top: 0;
+				transform: translateY(80%);
+				vertical-align: center;
+			}
+			li {
+				font-family: "Courier New", Courier, monospace;
+				list-style-type: none;
+				font-size: 12pt;
+				padding: 18px;
+			}
+			.right {
+				position: relative;
+				width: 15%;
+				float: right;
+				top: 0;
+				transform: translateY(80%);
+				vertical-align: center;
+			}
+			button {
+				border: none;
+				background: transparent;
+			}
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+			li:hover {
+				color: #CFA600;
+			}
+			#hiddenContent {
+				display: none;
+				width: 50%;
+				margin: auto;
+				background-color: #000000;
+				opacity: 0.85;
+				color: #FFFFFF;
+				border-radius: 10px;
+				font-family: "Courier New", Courier, monospace;
+			}
+			.first {
+				padding-top: 20px;
+				margin: 10px;
+				padding-bottom: 10px;
+			}
+			.second {
+				padding: 5px;
+				margin: 10px;
+			}
+			#exit {
+				font-size: 20pt;
+				font-family: "Courier New", Courier, monospace;
+				padding: 15px;
+				padding-top: 0;
+				float: right;
+				cursor: pointer;
+			}
+			img.buttons {
+				width: 50px;
+				height: 50px;
+			}
+			#hiddenContact {
+				display: none;
+				width: 50%;
+				margin: auto;
+				background-color: #000000;
+				opacity: 0.85;
+				color: #FFFFFF;
+				border-radius: 10px;
+				font-family: "Courier New", Courier, monospace;
+			}
+			#hiddenContact a {
+				text-decoration: none;
+				color: #FFFFFF;
+			}
+			#hiddenContact a:hover {
+				text-decoration: underline;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="ancestor">
+		<ul class="left">
+			<li onclick="showContent()">About</li>
+			
+			<a href="#">
+			<li>Blog</li>
+			</a>
+
+			<li onclick="showContact()">Contact</li>
+
+			<a href="#">
+			<li>Design</li>
+			</a>
+
+			<a href="Long,Carmen.pdf" target="_blank">
+			<li>Resume</li>
+			</a>
+		</ul>
+
+		<ul class="right">
+			<li>
+				<a href="mailto:carmenbourlonlong@gmail.com">
+					<img class="buttons" src="images/at.png">
+				</a>
+			</li>
+			<!--<li>
+				<a href="#" target="_blank">
+					<img class="buttons" src="images/fb.png">
+				</a>
+			</li>-->
+			<li>
+				<a href="https://github.com/carmalou" target="_blank">
+					<img class="buttons" src="images/gh.png">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/carmalou" target="_blank">
+					<img class="buttons" src="images/twit.png">
+				</a>
+			</li>
+		</ul>
+		</div>
+
+				<div id="hiddenContent">
+					<div id="exit" onclick="hideContent()">X</div>
+						<p class="first">About Carmen<br /><br />
+						Carmen is a Web Developer in the Oklahoma City area. During her days, she works on JavaScript applications for a local company. Outside of work, she can be found watching Netflix with a computer in her lap trying to make sense of some tricky code snippet.
+						<br /><br />
+						A friendly, and easily approachable individual, Carmen has a knack for working with people. She's not one to give up on a challenge, having put herself through college working full time. In 2012, Carmen graduated from Oklahoma City University with a Bachelors Degree in Mass Communications. Her first job was at a newspaper, and she loves telling the story of how she moved from newspaper reporter to JavaScript developer. (It's kind of a long story, so be careful with this one.)
+						<br /><br />
+						Her interests include news and current events, JavaScript, and pancakes. Carmen also enjoys other breakfast foods, and has a love of typewriters.</p>
+				</div>
+
+				<div id="hiddenContact">
+					<div id="exit" onclick="hideContact()">X</div>
+						<p class="first">Wondering about Carmen's typewriter collection? Questions about how she could have possibly made the jump from newspapers to JavaScript? Do you have an idea or request for a blog post?<br /><br />
+						You can email Carmen at <a href="mailto:carmenbourlonlong@gmail.com">carmenbourlonlong@gmail.com</a> with any questions.</p>
+				</div>
+
+	</body>
+
+	<script type="text/javascript">
+		function showContent() {
+			document.getElementById("hiddenContent").style.display="block";
+			if(document.getElementById("hiddenContact").style.display="block") {
+				document.getElementById("hiddenContact").style.display="none";
+			}
+		}
+		function showContact() {
+			document.getElementById("hiddenContact").style.display="block";
+			if (document.getElementById("hiddenContent").style.display="block") {
+				document.getElementById("hiddenContent").style.display="none";
+			}
+		}
+		function hideContent() {document.getElementById("hiddenContent").style.display="none";}
+		function hideContact() {document.getElementById("hiddenContact").style.display="none";}
+	</script>
+
+</html>
