@@ -1,113 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
-		<style type = "text/css">
-			body {
-				background: url(images/type-set-resized.jpg) no-repeat center center fixed; 
- 				-webkit-background-size: cover;
- 				-moz-background-size: cover;
- 				-o-background-size: cover;
-				background-size: cover;
-				width: 100%;
-			}
-			.header {
-				font-family: "Courier New", Courier, monospace;
-				text-align: center;
-				font-size: 28pt;
-				position: absolute;
-				margin: 0;
-				top: 0;
-				width: 99%
-			}
-			.left {
-				position: relative;
-				width: 15%;
-				float: left;
-  				top: 0;
-				transform: translateY(80%);
-				vertical-align: center;
-			}
-			li {
-				font-family: "Courier New", Courier, monospace;
-				list-style-type: none;
-				font-size: 12pt;
-				padding: 18px;
-			}
-			.right {
-				position: relative;
-				width: 15%;
-				float: right;
-				top: 0;
-				transform: translateY(80%);
-				vertical-align: center;
-			}
-			button {
-				border: none;
-				background: transparent;
-			}
-			a {
-				text-decoration: none;
-				color: #000000;
-			}
-			li:hover {
-				color: #CFA600;
-			}
-			#hiddenContent {
-				display: none;
-				width: 50%;
-				margin: auto;
-				background-color: #000000;
-				opacity: 0.85;
-				color: #FFFFFF;
-				border-radius: 10px;
-				font-family: "Courier New", Courier, monospace;
-			}
-			.first {
-				padding-top: 20px;
-				margin: 10px;
-				padding-bottom: 10px;
-			}
-			.second {
-				padding: 5px;
-				margin: 10px;
-			}
-			#exit {
-				font-size: 20pt;
-				font-family: "Courier New", Courier, monospace;
-				padding: 15px;
-				padding-top: 0;
-				float: right;
-				cursor: pointer;
-			}
-			img.buttons {
-				width: 50px;
-				height: 50px;
-			}
-			#hiddenContact {
-				display: none;
-				width: 50%;
-				margin: auto;
-				background-color: #000000;
-				opacity: 0.85;
-				color: #FFFFFF;
-				border-radius: 10px;
-				font-family: "Courier New", Courier, monospace;
-			}
-			#hiddenContact a {
-				text-decoration: none;
-				color: #FFFFFF;
-			}
-			#hiddenContact a:hover {
-				text-decoration: underline;
-				color: #FFFFFF;
-			}
-		</style>
+	<title>Carmen Long: Designer, Developer, Extraordinaire!</title>
+	<link rel="stylesheet" href="images/style.css">
+	<script src="images/script.js"></script>
 	</head>
 
 	<body>
 
-		<div class="ancestor">
 		<ul class="left">
 			<li onclick="showContent()">About</li>
 			
@@ -132,11 +32,6 @@
 					<img class="buttons" src="images/At.png">
 				</a>
 			</li>
-			<!--<li>
-				<a href="#" target="_blank">
-					<img class="buttons" src="images/fb.png">
-				</a>
-			</li>-->
 			<li>
 				<a href="https://github.com/carmalou" target="_blank">
 					<img class="buttons" src="images/gh.png">
@@ -148,7 +43,6 @@
 				</a>
 			</li>
 		</ul>
-		</div>
 
 				<div id="hiddenContent">
 					<div id="exit" onclick="hideContent()">X</div>
@@ -167,22 +61,4 @@
 				</div>
 
 	</body>
-
-	<script type="text/javascript">
-		function showContent() {
-			document.getElementById("hiddenContent").style.display="block";
-			if(document.getElementById("hiddenContact").style.display="block") {
-				document.getElementById("hiddenContact").style.display="none";
-			}
-		}
-		function showContact() {
-			document.getElementById("hiddenContact").style.display="block";
-			if (document.getElementById("hiddenContent").style.display="block") {
-				document.getElementById("hiddenContent").style.display="none";
-			}
-		}
-		function hideContent() {document.getElementById("hiddenContent").style.display="none";}
-		function hideContact() {document.getElementById("hiddenContact").style.display="none";}
-	</script>
-
 </html>

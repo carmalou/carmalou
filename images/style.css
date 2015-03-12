@@ -5,36 +5,31 @@ body {
  	-o-background-size: cover;
 	background-size: cover;
 	width: 100%;
-	height: 100%;
 	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
-.header {
-	font-family: "Courier New", Courier, monospace;
-	text-align: center;
-	font-size: 28pt;
-	position: absolute;
-	margin: 0;
-	top: 0;
-	width: 99%
 }
 .left {
-	margin-top: 0;
-	padding: 0;
+	position: relative;
+	width: 15%;
+	float: left;
 	top: 0;
-	text-align: center;
+	transform: translateY(80%);
+	vertical-align: center;
 }
-ol {
+li {
 	font-family: "Courier New", Courier, monospace;
-	display: inline-block;
 	list-style-type: none;
+	cursor: pointer;
 	font-size: 12pt;
 	padding: 18px;
-	cursor: pointer;
 }
 .right {
+	margin: 0;
+	position: absolute;
+	right: 0;
+}
+.right li {
 	display: inline;
+	padding: 0px;
 }
 button {
 	border: none;
@@ -44,13 +39,11 @@ a {
 	text-decoration: none;
 	color: #000000;
 }
-ol:hover {
+li:hover {
 	color: #CFA600;
 }
 #hiddenContent {
 	display: none;
-	position: relative;
-	margin: 0 auto;
 	width: 50%;
 	margin: auto;
 	background-color: #000000;
@@ -77,13 +70,13 @@ ol:hover {
 	cursor: pointer;
 }
 img.buttons {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 #hiddenContact {
 	display: none;
-	position: relative;
 	width: 50%;
+	margin: auto;
 	background-color: #000000;
 	opacity: 0.85;
 	color: #FFFFFF;
